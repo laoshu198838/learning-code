@@ -21,7 +21,10 @@ setting = {
     "产品信息":"11111"
 }
 
-event_engine = EventEngine()
-main_engine = MainEngine(event_engine)
-main_engine.add_gateway(CtpGateway)
-main_engine.connect(setting, "CTP")
+event_engine = EventEngine()    #事件引擎实例化
+main_engine = MainEngine(event_engine)  #将事件引擎传到主引擎，就是利用engine = engine_class(self, self.event_engine)进行实例化
+main_engine.add_gateway(CtpGateway)   #加载Gateway
+main_engine.connect(setting, "CTP")   #
+print('中文')
+import sys,pprint
+pprint.pprint(sys.path)
